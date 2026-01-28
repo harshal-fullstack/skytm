@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Sidebar } from './sidebar/sidebar';
@@ -15,3 +15,5 @@ export const routes: Routes = [
        {path:'addmoney', component:AddMoney},
        {path:'transfermoney', component:PaymentMoney},
 ];
+RouterModule.forRoot(routes, { useHash: true })
+
