@@ -1,0 +1,48 @@
+    <app-sidebar/>
+    <div class="d-flex " id="custom1">
+        <div class="me-auto p-2 align-self-center">
+            <p class="paisa">my balance: {{balance |currency:'INR'}}</p>
+        </div>
+        <div class="p-2 align-self-center">
+            <button class="btn btn-success" routerLink="/addmoney">+ Add Money</button>
+        </div>
+        <div class="p-2 align-self-center">
+            <button class="btn btn-primary" routerLink="/transfermoney">Transfer Money</button>
+        </div>
+        <div class="p-2 align-self-center">
+            <button class="btn btn-info" (click)="delhistory()">Delete All Record</button>
+        </div>     
+    </div>
+
+    <br>
+    <br> 
+
+<table class="table table-white table-striped-columns">
+    <thead>
+        <th class="text-center" >transactionId</th>
+        <th class="text-center">userId</th>
+        <th class="text-center">receiverId</th> 
+        <th class="text-center">receiverName</th>
+        <th class="text-center">receiverPhoneNumber</th>
+        <th class="text-center">transactionType</th>
+        <th class="text-center">transactionDate</th>
+        <th class="text-center">initialAmount</th>
+        <th class="text-center">transferAmount</th>
+        <th class="text-center">Action</th>        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of history">
+            <td class="text-center">{{item.transactionId}}</td>
+            <td class="text-center">{{item.userId}}</td>
+            <td class="text-center">{{item.receiverId}}</td>
+            <td class="text-center">{{item.receiverName}}</td>
+            <td class="text-center">{{item.receiverPhoneNumber}}</td>
+            <td class="text-center">{{item.transactionType}}</td>
+            <td class="text-center">{{item.transactionDate | date:'short'}}</td>
+            <td class="text-center">{{item.initialAmount}}</td>
+            <td class="text-center">{{item.transferAmount}}</td>
+            <td class="text-center"><button class="btn btn-danger"(click)="delo(item.transactionId)"> Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+

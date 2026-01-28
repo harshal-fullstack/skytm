@@ -1,0 +1,17 @@
+<div>
+    <app-login *ngIf="isloggedin !=true"
+      (loginEvent)="received($event)">
+    </app-login>
+    <div class="row" *ngIf="isloggedin ==true">
+        <div class="col-2" >
+            <app-sidebar   
+            (loginEvent)="received($event)"/>
+
+            <!-- </app-sidebar> -->
+        </div>
+        <div class="col-10" *ngIf="isloggedin == true">
+
+            <router-outlet /> 
+        </div>
+    </div>
+</div>

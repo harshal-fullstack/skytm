@@ -1,0 +1,19 @@
+<div class="box">
+    <div id="Name">
+        <span class="txt">Transfer Money</span>
+    </div>
+    <form>
+        <div class="input-group form-control">
+            <input type="tel" id="phone" [(ngModel)]="transfermoneymodel.receiverPhoneNumber" 
+            placeholder="phoneNumber" pattern="[0-9]{10}" name="senderPhoneNumber" >
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Rs.</span>
+            <input type="number" class="form-control" name="amount"
+             [(ngModel)]="transfermoneymodel.amount" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+        </div>
+        <button type="submit" class="btn btn-primary"(click)="transfermoney()" ><a>Send To</a></button>
+    </form>
+</div>
+

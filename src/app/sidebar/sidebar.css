@@ -1,0 +1,41 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  bottom: 0;
+  width: 244px;
+  background-color: #121212;
+  padding-top: 20px;
+}
+.sidebar .nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.sidebar .nav ul li {
+  padding: 10px 0px;
+}
+.sidebar .nav ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.paisa {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1DB954;
+    text-decoration: underline;
+   
+}
+.brand-name{
+  margin-left: 35px;
+}
+.nav{
+  padding-left: 8px;
+  padding-top: 85px;
+}
+
+

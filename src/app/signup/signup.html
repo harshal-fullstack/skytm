@@ -1,0 +1,39 @@
+<div>
+  <div class="signup-box mx-auto">
+      <div id="bazzar">
+        <span class="paisa">SkyTM</span>
+      </div>
+      <form  #signupForm="ngForm" name="form" (ngSubmit)="signupForm.form.valid && onSubmit()" novalidate id="signupForm">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" name="Username" [(ngModel)]="signupmodel.username" 
+          #Username="ngModel" [ngClass]=" {'is-invalid': signupForm.submitted && Username.invalid}"required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email" name="Email" [(ngModel)]="signupmodel.email"
+          #email="ngModel" [ngClass]=" {'is-invalid': signupForm.submitted && email.invalid}" required>
+        </div>
+        <div class="input-group">
+          <input type="tel" id="phone" placeholder="phoneNumber" pattern="[0-9]{10}"name="phoneNumber" [(ngModel)]="signupmodel.phoneNumber" 
+          #phone="ngModel" [ngClass]=" {'is-invalid': signupForm.submitted && phone.invalid}"required>
+        </div>
+        <div class="input-group">
+          <select  name="gender" id="gender" [(ngModel)]="signupmodel.gender" 
+          #gender="ngModel" [ngClass]=" {'is-invalid': signupForm.submitted && gender.invalid}"required>
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      
+        <div class="input-group"> 
+          <input type="password" id="password" placeholder="Password" name="Password" [(ngModel)]="signupmodel.password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <div class="login-link">
+        Already have an account? <a routerLink="/login">Log In</a>
+      </div>
+  </div>
+</div>
+

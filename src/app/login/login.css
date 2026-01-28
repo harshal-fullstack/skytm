@@ -1,0 +1,79 @@
+* {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #191414;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    background: rgba(25, 20, 20, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 450px;
+    text-align: center;
+}
+.paisa {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1DB954;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    font-size: 18px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1ed760;
+}
+
+.links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.links a:hover {
+    color: #1DB954;
+}
+.signup-box {
+    background: rgba(25, 20, 20, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 650px;
+    text-align: center;
+}
